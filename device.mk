@@ -81,23 +81,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL (proprietry)
 PRODUCT_COPY_FILES += \
-	device/huawei/u8800/proprietry/lib/libril-qc-1.so:system/lib/libril-qc-1.so \
-	device/huawei/u8800/proprietry/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
-	device/huawei/u8800/proprietry/lib/libdiag.so:system/lib/libdiag.so \
-	device/huawei/u8800/proprietry/lib/liboncrpc.so:system/lib/liboncrpc.so \
-	device/huawei/u8800/proprietry/lib/libqmi.so:system/lib/libqmi.so \
-	device/huawei/u8800/proprietry/lib/libdsm.so:system/lib/libdsm.so \
-	device/huawei/u8800/proprietry/lib/libqueue.so:system/lib/libqueue.so \
 	device/huawei/u8800/proprietry/lib/libdl.so:system/lib/libdl.so \
-	device/huawei/u8800/proprietry/lib/libcm.so:system/lib/libcm.so \
-	device/huawei/u8800/proprietry/lib/libmmgsdilib.so:system/lib/libmmgsdilib.so \
 	device/huawei/u8800/proprietry/lib/libgsdi_exp.so:system/lib/libgsdi_exp.so \
-	device/huawei/u8800/proprietry/lib/libwms.so:system/lib/libwms.so \
-	device/huawei/u8800/proprietry/lib/libnv.so:system/lib/libnv.so \
-	device/huawei/u8800/proprietry/lib/libwmsts.so:system/lib/libwmsts.so \
-	device/huawei/u8800/proprietry/lib/libpbmlib.so:system/lib/libpbmlib.so \
-	device/huawei/u8800/proprietry/lib/libdss.so:system/lib/libdss.so \
-	device/huawei/u8800/proprietry/lib/libauth.so:system/lib/libauth.so 
 
 # Sensors (Proprietry)
 PRODUCT_COPY_FILES += \
