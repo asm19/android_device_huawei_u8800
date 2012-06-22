@@ -1,0 +1,26 @@
+on emmc-fs
+# mount mmc partitions
+# According to the SD partition table.
+    #wait /dev/block/mmcblk1p2
+    #mount ext4 /dev/block/mmcblk1p2 /system rw barrier=1
+    #wait /dev/block/mmcblk1p3
+    #exec /system/bin/e2fsck -p /dev/block/mmcblk1p3
+    #mount ext4 /dev/block/mmcblk1p3 /data nosuid nodev barrier=1 noauto_da_alloc
+    #mount ext4 /dev/block/mmcblk1p4 /cache nosuid nodev barrier=1
+
+# According to the new partition table.
+    #wait /dev/block/mmcblk0p12
+    #mount ext4 /dev/block/mmcblk0p12 /system rw barrier=1
+    #wait /dev/block/mmcblk0p13
+    #exec /system/bin/e2fsck -p /dev/block/mmcblk0p13
+    #mount ext4 /dev/block/mmcblk0p13 /data nosuid nodev barrier=1 noauto_da_alloc
+    #mount ext4 /dev/block/mmcblk0p14 /persist nosuid nodev barrier=1
+    #mount ext4 /dev/block/mmcblk0p15 /cache nosuid nodev barrier=1
+
+# According to the old partition table.
+    wait /dev/block/mmcblk0p12
+    mount ext4 /dev/block/mmcblk0p12 /system rw barrier=1
+    wait /dev/block/mmcblk0p13
+    exec /system/bin/e2fsck -p /dev/block/mmcblk0p13
+    mount ext4 /dev/block/mmcblk0p13 /data nosuid nodev barrier=1 noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p6 /cache nosuid nodev barrier=1
