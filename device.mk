@@ -55,3 +55,61 @@ $(call inherit-product-if-exists, device/huawei/u8800/initscripts/initscripts.mk
 
 # Include keyboards
 $(call inherit-product-if-exists, device/huawei/u8800/keyboards/keyboards.mk)
+
+# Proprietry Files
+# Camera
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/libmmipl.so:obj/lib/libmmipl.so \
+	device/huawei/u8800/proprietry/lib/libmmjpeg.so:obj/lib/libmmjpeg.so \
+	device/huawei/u8800/proprietry/lib/libcamera_client.so:system/lib/libcamera_client.so \
+	device/huawei/u8800/proprietry/lib/liboemcamera.so:system/lib/liboemcamera.so \
+	device/huawei/u8800/proprietry/lib/libcamera.so:system/lib/libcamera.so \
+	device/huawei/u8800/proprietry/lib/libcamera.so:obj/lib/libcamera.so
+
+# Bluetooth bin
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/bin/btwlancoex:system/bin/btwlancoex \
+	device/huawei/u8800/proprietry/bin/hci_qcomm_init:system/bin/hci_qcomm_init
+
+# Gemini (proprietry)
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/libgemini.so:system/lib/libgemini.so \
+
+# Gralloc
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/hw/gralloc.msm7x30.so:system/lib/hw/gralloc.u8800.so \
+
+# RIL (proprietry)
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/libril-qc-1.so:system/lib/libril-qc-1.so \
+	device/huawei/u8800/proprietry/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
+	device/huawei/u8800/proprietry/lib/libdiag.so:system/lib/libdiag.so \
+	device/huawei/u8800/proprietry/lib/liboncrpc.so:system/lib/liboncrpc.so \
+	device/huawei/u8800/proprietry/lib/libqmi.so:system/lib/libqmi.so \
+	device/huawei/u8800/proprietry/lib/libdsm.so:system/lib/libdsm.so \
+	device/huawei/u8800/proprietry/lib/libqueue.so:system/lib/libqueue.so \
+	device/huawei/u8800/proprietry/lib/libdl.so:system/lib/libdl.so \
+	device/huawei/u8800/proprietry/lib/libcm.so:system/lib/libcm.so \
+	device/huawei/u8800/proprietry/lib/libmmgsdilib.so:system/lib/libmmgsdilib.so \
+	device/huawei/u8800/proprietry/lib/libgsdi_exp.so:system/lib/libgsdi_exp.so \
+	device/huawei/u8800/proprietry/lib/libwms.so:system/lib/libwms.so \
+	device/huawei/u8800/proprietry/lib/libnv.so:system/lib/libnv.so \
+	device/huawei/u8800/proprietry/lib/libwmsts.so:system/lib/libwmsts.so \
+	device/huawei/u8800/proprietry/lib/libpbmlib.so:system/lib/libpbmlib.so \
+	device/huawei/u8800/proprietry/lib/libdss.so:system/lib/libdss.so \
+	device/huawei/u8800/proprietry/lib/libauth.so:system/lib/libauth.so 
+
+# Sensors (Proprietry)
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/hw/sensors.default.so:system/lib/hw/sensors.u8800.so \
+	device/huawei/u8800/proprietry/bin/compassd:system/bin/compassd \
+
+# Sensors (Prebuilt)
+PRODUCT_COPY_FILES += \
+	device/huawei/u8800/proprietry/lib/libsensorservice.so:system/lib/libsensorservice.so \
+
+# System patch
+PRODUCT_COPY_FILES += \
+#	device/huawei/u8800/proprietry/lib/liboverlay.so:system/lib/liboverlay.so \
+	device/huawei/u8800/proprietry/lib/libstagefright_color_conversion.so:system/lib/libstagefright_color_conversion.so \
+
